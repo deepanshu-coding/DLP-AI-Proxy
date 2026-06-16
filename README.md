@@ -35,8 +35,10 @@ Policy Engine
   └── risk < 50   → ALLOW
   │
   ▼
-Redactor / Forwarder
+Redactor & Forwarder
   │
+ LLM
+  | 
   ▼
 Audit Logger + Metrics
 ```
@@ -154,14 +156,6 @@ curl -X POST http://localhost:8000/scan \
 
 ---
 
-## Running Tests
-
-```bash
-pytest
-```
-
-Coverage report is written to `htmlcov/index.html`.  Target: ≥ 80%.
-
 ---
 
 ## SLM Integration (Future)
@@ -205,21 +199,7 @@ app/
 │   ├── metrics_service.py
 │   └── redactor.py
 └── main.py
-tests/
-├── test_api.py
-├── test_document_extractor.py
-├── test_engines.py
-├── test_image_ocr.py
-├── test_keyword_detector.py
-├── test_metrics.py
-├── test_redactor.py
-├── test_regex_detector.py
-├── test_slm_detector.py
-└── test_text_extractor.py
-Dockerfile
-docker-compose.yml
 requirements.txt
-requirements-dev.txt
 pytest.ini
 README.md
 ```
